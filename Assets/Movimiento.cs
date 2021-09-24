@@ -15,15 +15,12 @@ public class Movimiento : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        
+        rb = GetComponent<Rigidbody>();   
     }
 
 
     void Update()
-    {
-
-        
+    { 
         if (Input.GetMouseButton(1))
         {
             rb.transform.rotation = new Quaternion(rb.transform.rotation.x, camara.transform.rotation.y, rb.transform.rotation.z, camara.transform.rotation.w);
@@ -49,21 +46,5 @@ public class Movimiento : MonoBehaviour
         {
             rb.position += -transform.right * velocidad * Time.deltaTime;
         }
-        /*if (Input.GetKey(KeyCode.E))
-        {
-            rb.transform.Rotate(0, VelocidadRotacion, 0);
-            
-        }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            rb.transform.Rotate(0, -VelocidadRotacion, 0);
-            
-        }*/
-
-
-    }
-    Vector3 ConseguirPerpendicular(Vector3 direccion)
-    {
-        return Vector3.Cross(direccion, Vector3.up);
     }
 }
