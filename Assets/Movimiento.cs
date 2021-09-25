@@ -28,8 +28,7 @@ public class Movimiento : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             rb.transform.rotation = new Quaternion(rb.transform.rotation.x, camara.transform.rotation.y, rb.transform.rotation.z, camara.transform.rotation.w);
-            
-            
+
             rb.position += transform.forward * velocidad * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
