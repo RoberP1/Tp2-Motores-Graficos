@@ -6,7 +6,7 @@ public class Jump : MonoBehaviour
 {
 
     public int CantSaltos = 2;
-    public int PotenciaSalto = 1;
+    public float PotenciaSalto = 1;
     public int SaltosHechos = 0;
     private Rigidbody rb;
 
