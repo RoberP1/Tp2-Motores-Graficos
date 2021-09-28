@@ -39,14 +39,16 @@ public class MovimientoAutomatico : MonoBehaviour
     void Subir()
     {
         //transform.position += transform.up * rapidez *Time.deltaTime ;
-        rb.velocity = transform.up * rapidez;
+        //rb.velocity = transform.up * rapidez;
+        rb.MovePosition(transform.position + transform.up * rapidez * Time.deltaTime * 2);
         
     }
 
     void Bajar()
     {
         //transform.position -= transform.up * rapidez * Time.deltaTime;
-        rb.velocity = -transform.up * rapidez;
+        //rb.velocity = -transform.up * rapidez;
+        rb.MovePosition(transform.position - transform.up * rapidez * Time.deltaTime * 2);
     }
 
 }
